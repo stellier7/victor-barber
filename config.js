@@ -93,5 +93,90 @@ const CONFIG = {
     { image: "images/gallery/interior.jpg", alt: "Sillas y espejos de Victor's Barbería", wide: true, position: "center 72%" },
     { image: "images/gallery/entrada.jpg", alt: "Entrada de noche, sobre el Bulevar Morazán", wide: true, position: "center 46%" },
     { image: "images/gallery/fachada.jpg", alt: "Fachada de Victor's Barbería en Lomas Club Deportivo", wide: true, position: "center 58%" }
-  ]
+  ],
+  productCategories: ["Pomada", "Pasta", "Cera", "Polvo"],
+  products: [
+    {
+      id: "rolda-pomade-midnight",
+      name: "Rolda Pomade Midnight",
+      category: "Pomada",
+      teaser: "Aqua wax con keratina.",
+      image: "images/products/rolda-pomade-midnight.jpg",
+      featured: true,
+      price: null
+    },
+    {
+      id: "rolda-matte-paste",
+      name: "Rolda Matte Paste",
+      category: "Pasta",
+      teaser: "Sin brillo. Acabado mate.",
+      image: "images/products/rolda-matte-paste.jpg",
+      featured: true,
+      price: null
+    },
+    {
+      id: "rolda-fiber-wax-white",
+      name: "Rolda Fiber Wax White",
+      category: "Cera",
+      teaser: "Textura con extracto vegano.",
+      image: "images/products/rolda-fiber-wax-white.jpg",
+      featured: true,
+      price: null
+    },
+    {
+      id: "rolda-pomade-black",
+      name: "Rolda Pomade Black",
+      category: "Pomada",
+      teaser: "Cubre las canas por un rato.",
+      image: "images/products/rolda-pomade-black.jpg",
+      featured: true,
+      price: null
+    },
+    {
+      id: "agiva-08-gold",
+      name: "Agiva 08 Gold",
+      category: "Cera",
+      teaser: "Control máximo.",
+      image: "images/products/agiva-08-gold.jpg",
+      featured: true,
+      price: null
+    },
+    {
+      id: "rolda-styling-powder",
+      name: "Rolda Hair Styling Powder",
+      category: "Polvo",
+      teaser: "Volumen al instante. Mate, fijación ligera.",
+      image: "images/products/rolda-styling-powder.jpg",
+      featured: true,
+      price: null
+    }
+  ],
+  ui: {
+    navProducts: "Productos",
+    productsEyebrow: "Tienda",
+    productsTitle: "Productos",
+    productsSubtitle: "Rolda y Agiva para llevar el corte a casa.",
+    productsViewAll: "Ver productos",
+    cartLabel: "Carrito",
+    cartTitle: "Tu carrito",
+    cartClose: "Cerrar carrito",
+    cartEmpty: "Tu carrito está vacío.",
+    cartCheckout: "Pedir por WhatsApp",
+    cartClear: "Vaciar carrito",
+    cartRemove: "Quitar",
+    cartAdded: "Agregado",
+    catalogAddToCart: "Agregar al carrito",
+    catalogTitle: "Productos",
+    catalogSubtitle: "Rolda y Agiva. El precio se confirma por WhatsApp.",
+    catalogSearchPlaceholder: "Buscar producto…",
+    catalogFilterAll: "Todos",
+    catalogEmpty: "No hay productos con ese filtro.",
+    catalogWhatsApp: "Consultar por WhatsApp",
+    catalogClose: "Cerrar",
+    catalogBack: "Volver al inicio",
+    cartWhatsAppIntro: "Hola, me interesa este pedido de Victor's Barbería:",
+    cartWhatsAppOutro: "¿Me confirman disponibilidad y precio?",
+    cartItemLine: "{qty}× {name}",
+    whatsappLabel: "WhatsApp"
+  }
 };

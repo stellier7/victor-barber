@@ -1,8 +1,8 @@
-// Product marquee + WhatsApp cart for 0101 Barbershop (adapted from Scarleth).
+// Product marquee + WhatsApp cart for Victor's Barbería.
 (function (global) {
   "use strict";
 
-  const CART_KEY = "0101-cart-v1";
+  const CART_KEY = "victor-cart-v1";
 
   function esc(value) {
     return String(value ?? "").replace(/[&<>"']/g, (ch) =>
@@ -467,8 +467,17 @@
         )
       );
     };
+    let sets = 1;
     appendSet();
-    if (!reduced) appendSet();
+    let guard = 0;
+    while (track.scrollWidth < root.clientWidth + 48 && guard < 6) {
+      appendSet();
+      sets += 1;
+      guard += 1;
+    }
+    if (!reduced) {
+      for (let i = 0; i < sets; i += 1) appendSet();
+    }
     root.classList.toggle("is-reduced", reduced);
     if (reduced) return;
 

@@ -2,11 +2,95 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url=index.html">
-<title>Victor's Barbería</title>
-<link rel="canonical" href="index.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Productos · Victor's Barbería</title>
+<meta name="description" content="Rolda y Agiva en Victor's Barbería, Lomas Club Deportivo. El precio se confirma por WhatsApp.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="images/logo.jpg" type="image/jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<p><a href="index.html">Victor's Barbería</a></p>
+  <nav class="nav scrolled" id="nav">
+    <a href="index.html" class="nav-brand">
+      <img src="images/logo.jpg" alt="" class="nav-logo" width="68" height="68">
+      <span class="nav-name">Victor's <em>Barbería</em></span>
+    </a>
+    <div class="nav-actions">
+      <div class="nav-links">
+        <a href="index.html#servicios" class="nav-link">Servicios</a>
+        <a href="index.html#galeria" class="nav-link">Galería</a>
+        <a href="productos.html" class="nav-link" aria-current="page">Productos</a>
+        <a href="index.html#contacto" class="nav-link">Mapa</a>
+      </div>
+      <a class="nav-cta" id="nav-whatsapp" href="https://wa.me/50495397558?text=Hola%2C%20quiero%20apartar%20una%20silla%20en%20Victor%27s%20Barber%C3%ADa" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.13-2.9-7C17.18 3.03 14.7 2 12.04 2Zm0 18.14h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.37c0-4.55 3.7-8.25 8.26-8.25 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.84c0 4.55-3.71 8.22-8.25 8.22Z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="page-catalog">
+    <div class="wrap">
+      <a href="index.html" class="catalog-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Volver al inicio</span>
+      </a>
+      <div class="section-head">
+        <div class="kicker">Tienda</div>
+        <h1 id="catalog-title">Productos</h1>
+        <p id="catalog-subtitle"></p>
+      </div>
+      <div class="catalog-toolbar">
+        <div class="catalog-chips" id="catalog-chips" role="toolbar" aria-label="Filtrar por categoría"></div>
+        <input type="search" class="catalog-search" id="catalog-search" placeholder="Buscar producto…" autocomplete="off">
+      </div>
+      <div class="catalog-grid" id="catalog-grid"></div>
+      <p class="catalog-empty" id="catalog-empty" hidden></p>
+    </div>
+  </main>
+
+  <footer class="wrap">
+    <div class="footer-row">
+      <span class="fbrand">Victor's Barbería</span>
+      <span>Lomas Club Deportivo · Bulevar Morazán</span>
+    </div>
+    <div class="foot-credit">Desarrollado por <a href="https://www.iagodigital.com/" target="_blank" rel="noopener">IAGO Digital</a></div>
+  </footer>
+
+  <div class="product-modal" id="product-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="product-modal-name">
+    <button type="button" class="product-modal-backdrop" id="product-modal-backdrop" tabindex="-1" aria-label="Cerrar"></button>
+    <div class="product-modal-panel">
+      <button type="button" class="product-modal-close" id="product-modal-close" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg>
+      </button>
+      <div class="product-modal-media">
+        <img src="" alt="" id="product-modal-img" decoding="async">
+      </div>
+      <div class="product-modal-copy">
+        <span class="product-tag" id="product-modal-category"></span>
+        <h2 id="product-modal-name"></h2>
+        <p class="product-teaser" id="product-modal-teaser"></p>
+        <p class="product-price" id="product-modal-price" hidden></p>
+        <div class="product-modal-actions">
+          <button type="button" class="btn btn-primary" id="product-modal-add">Agregar al carrito</button>
+          <a class="btn btn-ghost" id="product-modal-whatsapp" href="https://wa.me/50495397558" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="config.js"></script>
+<script src="products.js"></script>
+<script>
+(function () {
+  if (window.ProductsUI) {
+    ProductsUI.initCartUI();
+    ProductsUI.initCatalogPage();
+  }
+})();
+</script>
 </body>
 </html>

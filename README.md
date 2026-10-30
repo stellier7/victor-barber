@@ -11,3 +11,4 @@ Los precios distintos de corte y barba (L 500) son una referencia hasta confirma
 | Hero | `images/hero/` |
 | Equipo | `images/team.jpg` |
 | Cortes | `images/gallery/` |
+| Productos | `images/products/` |

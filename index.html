@@ -67,6 +67,7 @@
       <div class="nav-links">
         <a href="#servicios" class="nav-link">Servicios</a>
         <a href="#galeria" class="nav-link">Galería</a>
+        <a href="#productos" class="nav-link">Productos</a>
         <a href="#contacto" class="nav-link">Mapa</a>
       </div>
       <a class="nav-cta" id="nav-whatsapp" href="https://wa.me/50495397558?text=Hola%2C%20quiero%20apartar%20una%20silla%20en%20Victor%27s%20Barber%C3%ADa" target="_blank" rel="noopener">
@@ -156,6 +157,24 @@
     </div>
   </section>
 
+  <section id="productos">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker" data-reveal>Tienda</div>
+        <h2 data-reveal style="--delay:.05s">Para llevar el corte a casa</h2>
+        <p data-reveal style="--delay:.1s">Rolda y Agiva. El precio se confirma por WhatsApp.</p>
+      </div>
+      <div data-reveal style="--delay:.12s">
+        <div class="products-marquee" id="products-marquee">
+          <div class="products-marquee-track" data-marquee-track></div>
+        </div>
+      </div>
+      <div class="products-cta-wrap" data-reveal style="--delay:.16s">
+        <a href="productos.html" class="btn btn-primary" data-products-cta>Ver productos</a>
+      </div>
+    </div>
+  </section>
+
   <section id="galeria">
     <div class="wrap">
       <div class="section-head">
@@ -219,6 +238,7 @@
   </div>
 
 <script src="config.js"></script>
+<script src="products.js"></script>
 <script>
 (function render(){
   const pinSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21c4-3.2 7-6.6 7-10.5A7 7 0 0 0 5 10.5C5 14.4 8 17.8 12 21Z"/><circle cx="12" cy="10.5" r="2.3"/></svg>';
@@ -318,6 +338,11 @@
       </div>
     </div>
   `).join("");
+
+  if (window.ProductsUI){
+    ProductsUI.initCartUI();
+    ProductsUI.initFeaturedMarquee(document.getElementById("products-marquee"));
+  }
 
   document.getElementById("gallery-grid").innerHTML = CONFIG.gallery.map((item, index) => `
     <button type="button" class="gallery-tile${item.wide ? " is-wide" : ""}" data-full="${esc(item.image)}" aria-label="${esc(item.alt)}">
