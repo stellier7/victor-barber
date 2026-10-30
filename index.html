@@ -147,7 +147,6 @@
         <p data-reveal style="--delay:.1s">La lista del local. Corte y barba está en L 500. El resto es una referencia hasta confirmar.</p>
       </div>
       <div class="services-accordion" id="services-grid"></div>
-      <p class="pricing-note" data-reveal><b>Lempiras.</b> Corte y barba, L 500. Los demás precios se confirman por WhatsApp.</p>
     </div>
   </section>
 
@@ -597,6 +596,23 @@
         const imgY = progress * (isCoarse ? -14 : -24);
         const imgX = isCoarse ? 0 : progress * 8 * dir;
         img.style.transform = `scale(${scale.toFixed(3)}) translate3d(${imgX.toFixed(1)}px, ${imgY.toFixed(1)}px, 0)`;
+      });
+
+      const serviceTravel = isCoarse ? 8 : 14;
+      document.querySelectorAll("#services-grid .service-item").forEach((item, index) => {
+        const rect = item.getBoundingClientRect();
+        const center = rect.top + rect.height / 2 - viewH / 2;
+        const progress = Math.max(Math.min(center / (viewH * 0.42), 1), -1);
+        const dir = index % 2 === 0 ? 1 : -1;
+        const shift = progress * serviceTravel * dir;
+        const near = 1 - Math.min(Math.abs(progress), 1);
+        const text = item.querySelector(".service-trigger-text");
+        const price = item.querySelector(".service-price");
+        const desc = item.querySelector(".service-desc");
+        item.style.setProperty("--mark", near.toFixed(3));
+        if (text) text.style.transform = `translate3d(${shift.toFixed(1)}px, 0, 0)`;
+        if (price) price.style.transform = `translate3d(${(-shift * 1.35).toFixed(1)}px, 0, 0)`;
+        if (desc) desc.style.transform = `translate3d(${(shift * 0.55).toFixed(1)}px, 0, 0)`;
       });
     }
 

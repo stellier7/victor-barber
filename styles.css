@@ -112,6 +112,10 @@
     *{ scroll-behavior:auto !important; animation:none !important; }
     .gallery-tile{ opacity:1 !important; transform:none !important; }
     .gallery-tile .gallery-img{ transform:none !important; }
+    .service-item::before{ transform:none !important; opacity:0 !important; }
+    .service-trigger-text,
+    .service-price,
+    .service-desc{ transform:none !important; }
   }
 
   nav{
@@ -403,14 +407,29 @@
     border-radius:var(--radius);
     overflow:hidden;
   }
-  .service-item{ border-bottom:1px solid var(--line); }
+  .service-item{
+    position:relative;
+    border-bottom:1px solid var(--line);
+    background:linear-gradient(90deg, rgba(255,255,255, calc(var(--mark, 0) * 0.075)), transparent 58%);
+  }
+  .service-item::before{
+    content:"";
+    position:absolute;
+    left:0; top:0; bottom:0;
+    width:2px;
+    background:#fff;
+    transform:scaleY(var(--mark, 0));
+    transform-origin:center;
+    pointer-events:none;
+    z-index:2;
+  }
   .service-item:last-child{ border-bottom:none; }
   .service-item.is-hot .service-trigger{
     background:linear-gradient(135deg, rgba(255,255,255,0.08), transparent 60%);
   }
   .service-trigger{
     width:100%;
-    display:flex; align-items:flex-start; justify-content:space-between; gap:16px;
+    display:flex; align-items:flex-start; justify-content:space-between; gap:22px;
     padding:20px 22px;
     background:transparent; border:none; text-align:left;
   }
@@ -450,17 +469,6 @@
     color:var(--ink-soft);
     font-size:15px;
   }
-  .pricing-note{
-    margin:28px auto 0;
-    max-width:760px;
-    padding:16px 20px;
-    border:1px solid var(--line);
-    border-radius:14px;
-    text-align:center;
-    color:#E4E4E4;
-    font-size:14.5px;
-  }
-  .pricing-note b{ color:var(--gold); font-weight:700; }
 
   #galeria .wrap{ overflow:visible; }
   .gallery-grid{
