@@ -75,10 +75,9 @@
 
   <header class="hero" id="top">
     <div class="hero-media" id="hero-media">
-      <img src="images/hero/fade.jpg" alt="Fade terminado en Victor's Barbería" class="hero-img is-active" style="object-position:72% 28%">
-      <img src="images/hero/barbero.jpg" alt="" class="hero-img" style="object-position:48% 22%">
-      <img src="images/hero/entrada.jpg" alt="" class="hero-img" style="object-position:58% 46%">
-      <img src="images/hero/interior.jpg" alt="" class="hero-img" style="object-position:center 55%">
+      <video class="hero-video" id="hero-video" autoplay muted loop playsinline poster="images/hero/poster.jpg" preload="auto" aria-hidden="true">
+        <source src="images/hero/00806a3b-abbd-432e-bed9-928530f47afd.mp4" type="video/mp4">
+      </video>
       <div class="hero-media-overlay"></div>
     </div>
     <div class="hero-field">
@@ -409,15 +408,26 @@
     });
   }
 
-  const slides = Array.from(document.querySelectorAll(".hero-img"));
-  if (!reduced && slides.length > 1){
-    let heroIndex = 0;
-    setInterval(() => {
-      if (document.hidden) return;
-      slides[heroIndex].classList.remove("is-active");
-      heroIndex = (heroIndex + 1) % slides.length;
-      slides[heroIndex].classList.add("is-active");
-    }, 4200);
+  const heroVideo = document.getElementById("hero-video");
+  if (heroVideo){
+    const heroRate = 0.75;
+    const playHero = () => {
+      if (reduced || document.hidden) return;
+      if (heroVideo.playbackRate !== heroRate) heroVideo.playbackRate = heroRate;
+      heroVideo.play().catch(() => {});
+    };
+    if (reduced){
+      heroVideo.removeAttribute("autoplay");
+      heroVideo.pause();
+    } else {
+      heroVideo.addEventListener("loadedmetadata", playHero);
+      heroVideo.addEventListener("play", playHero);
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) heroVideo.pause();
+        else playHero();
+      });
+      playHero();
+    }
   }
 
   if (reduced){
