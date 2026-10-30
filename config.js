@@ -1,7 +1,7 @@
 const CONFIG = {
   business: {
     name: "Victor's Barbería",
-    tagline: "La línea exacta. Lomas Club Deportivo. Llegás sin cita.",
+    tagline: "Victor's Barbería",
     email: "victbarber21@gmail.com",
     phoneDisplay: "+504 9539-7558",
     whatsappNumber: "50495397558",

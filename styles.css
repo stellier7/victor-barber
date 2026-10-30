@@ -135,7 +135,6 @@
     letter-spacing:0.06em;
     line-height:1;
   }
-  .nav-brand em{ font-style:normal; color:var(--ink); font-weight:400; }
   .nav-logo{
     width:68px; height:68px; border-radius:50%;
     object-fit:cover;
@@ -263,7 +262,7 @@
   .hero h1{
     font-size:clamp(58px, 8.4vw, 96px);
     line-height:0.88;
-    max-width:10ch;
+    max-width:12ch;
     letter-spacing:0.02em;
   }
   .hero h1 .accent-word{
@@ -940,7 +939,7 @@
     .wa-float{ width:56px; height:56px; }
     .wa-float svg{ width:28px; height:28px; }
     .contact-card{ padding:22px 18px; }
-    .hero h1{ max-width:12ch; }
+    .hero h1{ max-width:none; }
     .hero-actions{ flex-direction:column; align-items:stretch; }
     .hero-actions .btn{ justify-content:center; }
   }
@@ -1092,7 +1091,6 @@ body.product-modal-open{ overflow:hidden; }
   .catalog-grid{ grid-template-columns:repeat(2, minmax(0, 1fr)); gap:20px 12px; }
   .product-modal-panel{ grid-template-columns:1fr; }
   .product-modal-media{ aspect-ratio:1; max-height:42svh; }
-  .nav-name{ display:none; }
   .nav-links{ gap:12px; }
   .nav-link{ font-size:12.5px; }
 }
