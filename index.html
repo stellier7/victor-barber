@@ -345,7 +345,7 @@
   }
 
   document.getElementById("gallery-grid").innerHTML = CONFIG.gallery.map((item, index) => `
-    <button type="button" class="gallery-tile${item.wide ? " is-wide" : ""}" data-full="${esc(item.image)}" aria-label="${esc(item.alt)}">
+    <button type="button" class="gallery-tile${item.wide ? " is-wide" : ""}" data-parallax-tile data-full="${esc(item.image)}" aria-label="${esc(item.alt)}">
       <img class="gallery-img" src="${esc(item.image)}" alt="${esc(item.alt)}" style="${item.position ? `object-position:${esc(item.position)}` : ""}" loading="${index < 3 ? "eager" : "lazy"}">
     </button>
   `).join("");
@@ -390,6 +390,23 @@
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
   const isCoarse = window.matchMedia("(pointer: coarse)").matches;
+
+  const galleryTiles = document.querySelectorAll("[data-parallax-tile]");
+  if (reduced){
+    galleryTiles.forEach((tile) => tile.classList.add("is-shown"));
+  } else {
+    const galleryObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-shown");
+        galleryObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.16, rootMargin: "0px 0px -6% 0px" });
+    galleryTiles.forEach((tile, index) => {
+      tile.style.transitionDelay = `${(index % 3) * 80}ms`;
+      galleryObserver.observe(tile);
+    });
+  }
 
   const slides = Array.from(document.querySelectorAll(".hero-img"));
   if (!reduced && slides.length > 1){
@@ -538,6 +555,22 @@
           inner.style.setProperty("--ry", (progress * (MOTION.tiltScroll * 0.7)).toFixed(2) + "deg");
         });
       }
+
+      document.querySelectorAll("[data-parallax-tile]").forEach((tile, i) => {
+        const rect = tile.getBoundingClientRect();
+        const wide = tile.classList.contains("is-wide");
+        const center = rect.top + rect.height / 2 - viewH / 2;
+        const progress = Math.max(-1, Math.min(1, center / (viewH * 0.65)));
+        const depth = wide ? 0.55 : 0.68 + (i % 3) * 0.2;
+        const img = tile.querySelector(".gallery-img");
+        if (!img) return;
+        const drift = Math.sin(time * 0.7 + i * 0.9) * (wide ? 4 : 9);
+        const sway = Math.cos(time * 0.45 + i * 1.1) * (wide ? 0 : 6);
+        const travel = (isCoarse ? 20 : 28) * depth;
+        const imgY = progress * -travel + drift;
+        const scale = wide ? 1.12 : 1.22;
+        img.style.transform = `translate3d(${sway.toFixed(1)}px, ${imgY.toFixed(1)}px, 0) scale(${scale})`;
+      });
     }
 
     (function loop(){

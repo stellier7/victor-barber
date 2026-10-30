@@ -90,6 +90,7 @@ const CONFIG = {
     { image: "images/gallery/corte.jpg", alt: "Corte moderno con barba" },
     { image: "images/gallery/barbero.jpg", alt: "Perfilado de barba en la silla" },
     { image: "images/gallery/silla.jpg", alt: "Barbero y cliente después del corte" },
+    { image: "images/gallery/nino.jpg", alt: "Corte para niño en la silla", position: "center 28%" },
     { image: "images/gallery/interior.jpg", alt: "Sillas y espejos de Victor's Barbería", wide: true, position: "center 72%" },
     { image: "images/gallery/entrada.jpg", alt: "Entrada de noche, sobre el Bulevar Morazán", wide: true, position: "center 46%" },
     { image: "images/gallery/fachada.jpg", alt: "Fachada de Victor's Barbería en Lomas Club Deportivo", wide: true, position: "center 58%" }
