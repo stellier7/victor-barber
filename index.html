@@ -401,7 +401,7 @@
         entry.target.classList.add("is-shown");
         galleryObserver.unobserve(entry.target);
       });
-    }, { threshold: 0.16, rootMargin: "0px 0px -6% 0px" });
+    }, { threshold: 0.01, rootMargin: "140px 0px 180px 0px" });
     galleryTiles.forEach((tile, index) => {
       tile.style.transitionDelay = `${(index % 3) * 80}ms`;
       galleryObserver.observe(tile);
@@ -556,20 +556,43 @@
         });
       }
 
-      document.querySelectorAll("[data-parallax-tile]").forEach((tile, i) => {
+      const galleryTravel = isCoarse ? 60 : 110;
+      const galleryClamp = isCoarse ? 40 : 75;
+      const galleryCols = window.innerWidth > 900 ? 3 : 2;
+      let portraitIndex = 0;
+      document.querySelectorAll("[data-parallax-tile]").forEach((tile) => {
         const rect = tile.getBoundingClientRect();
         const wide = tile.classList.contains("is-wide");
         const center = rect.top + rect.height / 2 - viewH / 2;
-        const progress = Math.max(-1, Math.min(1, center / (viewH * 0.65)));
-        const depth = wide ? 0.55 : 0.68 + (i % 3) * 0.2;
+        const progress = center / viewH;
         const img = tile.querySelector(".gallery-img");
+
+        if (wide){
+          const y = Math.max(Math.min(progress * -40, 24), -24);
+          tile.style.transform = `translate3d(0, ${y.toFixed(1)}px, 0)`;
+          tile.style.zIndex = "1";
+          if (img){
+            img.style.transform = `scale(1.08) translate3d(0, ${(progress * (isCoarse ? -8 : -16)).toFixed(1)}px, 0)`;
+          }
+          return;
+        }
+
+        const col = portraitIndex % galleryCols;
+        const dir = col % 2 === 0 ? 1 : -1;
+        portraitIndex += 1;
+        const offsetY = Math.max(Math.min(progress * -galleryTravel * dir, galleryClamp), -galleryClamp);
+        const offsetX = isCoarse ? 0 : Math.max(Math.min(progress * 30 * (col - (galleryCols - 1) / 2), 28), -28);
+        const rotate = isCoarse ? 0 : progress * 2.5 * dir;
+        const near = 1 - Math.min(Math.abs(progress), 1);
+        tile.style.zIndex = String(2 + Math.round(near * 5));
+        tile.style.transform = `translate3d(${offsetX.toFixed(1)}px, ${offsetY.toFixed(1)}px, 0) rotate(${rotate.toFixed(2)}deg)`;
         if (!img) return;
-        const drift = Math.sin(time * 0.7 + i * 0.9) * (wide ? 4 : 9);
-        const sway = Math.cos(time * 0.45 + i * 1.1) * (wide ? 0 : 6);
-        const travel = (isCoarse ? 20 : 28) * depth;
-        const imgY = progress * -travel + drift;
-        const scale = wide ? 1.12 : 1.22;
-        img.style.transform = `translate3d(${sway.toFixed(1)}px, ${imgY.toFixed(1)}px, 0) scale(${scale})`;
+        const inView = rect.top < viewH && rect.bottom > 0;
+        const dist = Math.min(Math.abs(progress), 1);
+        const scale = inView ? 1.12 + dist * (isCoarse ? 0.04 : 0.06) : 1.12;
+        const imgY = progress * (isCoarse ? -14 : -24);
+        const imgX = isCoarse ? 0 : progress * 8 * dir;
+        img.style.transform = `scale(${scale.toFixed(3)}) translate3d(${imgX.toFixed(1)}px, ${imgY.toFixed(1)}px, 0)`;
       });
     }
 
