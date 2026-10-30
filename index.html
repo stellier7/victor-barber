@@ -144,7 +144,7 @@
       <div class="section-head">
         <div class="kicker" data-reveal>Servicios</div>
         <h2 data-reveal style="--delay:.05s">Lo que se hace en la silla</h2>
-        <p data-reveal style="--delay:.1s">La lista del local. Corte y barba está en L 500. El resto es una referencia hasta confirmar.</p>
+        <p data-reveal style="--delay:.1s">La lista del local.</p>
       </div>
       <div class="services-accordion" id="services-grid"></div>
     </div>
@@ -317,7 +317,6 @@
         <span class="service-trigger-text">
           <span class="service-heading">
             <h3>${esc(service.name)}</h3>
-            <span class="service-price">${esc(service.price)}</span>
           </span>
           <p class="service-teaser">${esc(service.teaser)}</p>
         </span>
@@ -607,11 +606,9 @@
         const shift = progress * serviceTravel * dir;
         const near = 1 - Math.min(Math.abs(progress), 1);
         const text = item.querySelector(".service-trigger-text");
-        const price = item.querySelector(".service-price");
         const desc = item.querySelector(".service-desc");
         item.style.setProperty("--mark", near.toFixed(3));
         if (text) text.style.transform = `translate3d(${shift.toFixed(1)}px, 0, 0)`;
-        if (price) price.style.transform = `translate3d(${(-shift * 1.35).toFixed(1)}px, 0, 0)`;
         if (desc) desc.style.transform = `translate3d(${(shift * 0.55).toFixed(1)}px, 0, 0)`;
       });
     }

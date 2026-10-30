@@ -29,56 +29,41 @@ const CONFIG = {
   services: [
     {
       name: "Corte clásico",
-      price: "L 300",
-      draft: true,
       teaser: "Máquina o tijera, el corte de siempre.",
       desc: "El corte clásico, a tijera o a máquina, con el contorno limpio."
     },
     {
       name: "Corte moderno",
-      price: "L 350",
-      draft: true,
       teaser: "Textura y el acabado de ahora.",
       desc: "Forma, textura y el acabado que se usa ahora."
     },
     {
       name: "Cortes para niños",
-      price: "L 200",
-      draft: true,
       teaser: "Para niños, en la misma silla.",
       desc: "Corte para niños, con la misma atención que el de adulto."
     },
     {
       name: "Perfilado de barba",
-      price: "L 250",
-      draft: true,
       teaser: "Línea de mejilla, cuello y bigote.",
       desc: "Se marca la mejilla, el cuello y el bigote."
     },
     {
       name: "Afeitado de barba",
-      price: "L 200",
-      draft: true,
       teaser: "Afeitado completo.",
       desc: "La barba completa, al ras."
     },
     {
       name: "Perfilado de cejas",
-      price: "L 80",
-      draft: true,
       teaser: "Con navaja, para acompañar el corte.",
       desc: "Definición de cejas con navaja."
     },
     {
       name: "Fade / degradado",
-      price: "L 350",
-      draft: true,
       teaser: "Degradado limpio, de la sien a la nuca.",
       desc: "El fade va por su cuenta. No va incluido en el corte clásico."
     },
     {
       name: "Corte y barba",
-      price: "L 500",
       teaser: "Las dos cosas, en la misma silla.",
       desc: "Corte y perfilado de barba en una sola cita.",
       hot: true

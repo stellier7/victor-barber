@@ -114,7 +114,6 @@
     .gallery-tile .gallery-img{ transform:none !important; }
     .service-item::before{ transform:none !important; opacity:0 !important; }
     .service-trigger-text,
-    .service-price,
     .service-desc{ transform:none !important; }
   }
 
@@ -441,13 +440,6 @@
     width:100%;
   }
   .service-trigger h3{ font-size:clamp(18px,2vw,22px); }
-  .service-price{
-    font-family:'Bebas Neue', sans-serif;
-    color:var(--gold);
-    font-size:16px;
-    letter-spacing:0.03em;
-    white-space:nowrap;
-  }
   .service-teaser{ margin-top:6px; color:var(--ink-soft); font-size:14.5px; }
   .service-chevron{
     width:28px; height:28px; flex:none; margin-top:2px;
