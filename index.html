@@ -186,13 +186,14 @@
         <div class="kicker" data-reveal>Tegucigalpa</div>
         <h2 data-reveal style="--delay:.05s">Apartá la silla</h2>
       </div>
-      <div class="maps-grid" id="maps-grid" data-reveal></div>
       <div class="contact-grid">
         <div class="quote-block" data-reveal>
           <p>“Llegás sin cita, o escribís por WhatsApp y te apartamos la silla.”</p>
           <div class="who">Victor's Barbería</div>
         </div>
         <div class="contact-card" data-reveal style="--delay:.08s">
+          <div class="contact-map" id="contact-map"></div>
+          <div class="contact-card-body">
           <div id="contact-locations"></div>
           <div class="contact-row">
             <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
@@ -213,6 +214,7 @@
             Escribir por WhatsApp
           </a>
           <div class="social-row" id="social-row"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -275,16 +277,8 @@
     <div class="hours-line"><span>${esc(hour.day)}</span><span>${esc(hour.time)}</span></div>
   `).join("");
 
-  document.getElementById("maps-grid").innerHTML = `
-    <article class="map-card">
-      <div class="map-card-head">
-        <h3>${esc(location.address)}</h3>
-        <a class="maps-link" href="${esc(location.mapsUrl)}" target="_blank" rel="noopener">Ver mapa</a>
-      </div>
-      <div class="map-frame">
-        <iframe title="Mapa de Victor's Barbería" src="${esc(location.mapsEmbedUrl)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </article>
+  document.getElementById("contact-map").innerHTML = `
+    <iframe title="Mapa de Victor's Barbería en Lomas Club Deportivo" src="${esc(location.mapsEmbedUrl)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   `;
 
   document.getElementById("contact-locations").innerHTML = `
