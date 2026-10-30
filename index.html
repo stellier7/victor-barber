@@ -3,36 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>0101 Barbershop · Tegucigalpa y Comayagua</title>
-<meta name="description" content="0101 Barbershop en Tegucigalpa y en Premium Plaza, Comayagua. Corte, degradado y barba. Agenda por WhatsApp.">
+<title>Victor's Barbería · Tegucigalpa</title>
+<meta name="description" content="Cortes frescos y fades limpios en Lomas Club Deportivo, Bulevar Morazán. Sin cita, o por WhatsApp.">
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+<meta property="og:title" content="Victor's Barbería">
+<meta property="og:description" content="Cortes frescos y fades limpios. Lomas Club Deportivo, Bulevar Morazán, Tegucigalpa.">
+<meta property="og:image" content="images/gallery/fachada.jpg">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "Victor's Barbería",
+  "image": "images/gallery/fachada.jpg",
+  "url": "https://www.instagram.com/victor.s_barberia/",
+  "telephone": "+50495397558",
+  "email": "victbarber21@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Lomas Club Deportivo, Bulevar Morazán",
+    "addressLocality": "Tegucigalpa",
+    "addressCountry": "HN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 14.0992082,
+    "longitude": -87.1808485
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "09:00",
+      "closes": "18:45"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "10:00",
+      "closes": "17:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/victor.s_barberia/",
+    "https://www.facebook.com/BarberiaVictors/",
+    "https://www.tiktok.com/@victor.s_sbarberia"
+  ]
+}
+</script>
 </head>
 <body>
   <nav class="nav" id="nav">
     <a href="#top" class="nav-brand">
-      <img src="images/logo.jpg" alt="" class="nav-logo" width="52" height="52">
-      <span>0101 <em>Barbershop</em></span>
+      <img src="images/logo.jpg" alt="" class="nav-logo" width="68" height="68">
+      <span class="nav-name">Victor's <em>Barbería</em></span>
     </a>
     <div class="nav-actions">
       <div class="nav-links">
-        <a href="productos.html" class="nav-link">Productos</a>
+        <a href="#servicios" class="nav-link">Servicios</a>
+        <a href="#galeria" class="nav-link">Galería</a>
+        <a href="#contacto" class="nav-link">Mapa</a>
       </div>
-      <button type="button" class="nav-cta" id="nav-whatsapp" aria-haspopup="dialog" aria-label="Elegir sucursal de WhatsApp">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.13-2.9-7C17.18 3.03 14.7 2 12.04 2Zm0 18.14h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.37c0-4.55 3.7-8.25 8.26-8.25 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.84c0 4.55-3.71 8.22-8.25 8.22Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.4-.12-.56.13-.17.25-.65.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.04-.38-1.99-1.22-.73-.66-1.23-1.46-1.37-1.71-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.12-.15.16-.25.24-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.4 1.02 2.57.12.17 1.75 2.67 4.24 3.75.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28Z"/></svg>
+      <a class="nav-cta" id="nav-whatsapp" href="https://wa.me/50495397558?text=Hola%2C%20quiero%20apartar%20una%20silla%20en%20Victor%27s%20Barber%C3%ADa" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.13-2.9-7C17.18 3.03 14.7 2 12.04 2Zm0 18.14h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.37c0-4.55 3.7-8.25 8.26-8.25 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.84c0 4.55-3.71 8.22-8.25 8.22Z"/></svg>
         <span>WhatsApp</span>
-      </button>
+      </a>
     </div>
   </nav>
 
   <header class="hero" id="top">
-    <div class="hero-media">
-      <img src="images/hero.jpg" alt="Barbero de 0101 preparando la máquina" class="hero-img">
+    <div class="hero-media" id="hero-media">
+      <img src="images/hero/fade.jpg" alt="Fade terminado en Victor's Barbería" class="hero-img is-active" style="object-position:72% 28%">
+      <img src="images/hero/barbero.jpg" alt="" class="hero-img" style="object-position:48% 22%">
+      <img src="images/hero/entrada.jpg" alt="" class="hero-img" style="object-position:58% 46%">
+      <img src="images/hero/interior.jpg" alt="" class="hero-img" style="object-position:center 55%">
       <div class="hero-media-overlay"></div>
     </div>
     <div class="hero-field">
@@ -44,28 +93,28 @@
     <div class="hero-inner">
       <div class="eyebrow-row" data-reveal style="--delay:0s">
         <span class="eyebrow-dot"></span>
-        <span>Tegucigalpa · Comayagua</span>
+        <span>Bulevar Morazán</span>
       </div>
-      <h1 data-reveal style="--delay:.1s">El corte, con <span class="accent-word">precisión</span>.</h1>
+      <h1 data-reveal style="--delay:.1s">Cortes frescos.</h1>
       <p class="hero-desc" data-reveal style="--delay:.2s">
-        0101 Barbershop tiene silla en Plaza Paseo Loarque, Tegucigalpa, y en Premium Plaza, Comayagua. Corte y barba, todos los días.
+        Fades limpios, en Lomas Club Deportivo. Llegás sin cita, o escribís por WhatsApp para apartar la silla.
       </p>
       <div class="hero-actions" data-reveal style="--delay:.3s">
-        <button type="button" class="btn btn-primary" id="hero-whatsapp" aria-haspopup="dialog">
+        <a class="btn btn-primary" id="hero-whatsapp" href="https://wa.me/50495397558?text=Hola%2C%20quiero%20apartar%20una%20silla%20en%20Victor%27s%20Barber%C3%ADa" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.13-2.9-7C17.18 3.03 14.7 2 12.04 2Zm0 18.14h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.37c0-4.55 3.7-8.25 8.26-8.25 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.84c0 4.55-3.71 8.22-8.25 8.22Z"/></svg>
           Agenda por WhatsApp
-        </button>
-        <a href="#contacto" class="btn btn-ghost">Ver sucursales</a>
+        </a>
+        <a href="#contacto" class="btn btn-ghost">Cómo llegar</a>
       </div>
       <div class="hero-social" id="hero-social" data-reveal style="--delay:.32s"></div>
       <div class="hero-meta" data-reveal style="--delay:.35s">
         <div class="item">
           <span class="label">Especialidad</span>
-          <span class="value">Corte · Barba</span>
+          <span class="value">Corte · Fade · Barba</span>
         </div>
         <div class="item">
-          <span class="label">Sucursales</span>
-          <span class="value">Dos ciudades</span>
+          <span class="label">Llegada</span>
+          <span class="value">Sin cita</span>
         </div>
         <div class="item">
           <span class="label">Horario</span>
@@ -82,13 +131,13 @@
         <div class="about-grid">
           <div class="about-card tilt-el" data-tilt data-reveal="scale">
             <div class="about-card-inner">
-              <img src="images/team.jpg" alt="Equipo de 0101 Barbershop frente al local">
+              <img src="images/team.jpg" alt="Barbero de Victor's Barbería perfilando una barba">
             </div>
           </div>
           <div class="about-copy">
-            <div class="kicker" data-reveal>El equipo</div>
-            <p class="lede" data-reveal style="--delay:.06s">Cuatro barberos y el mismo corte: limpio, rápido y como lo pediste.</p>
-            <p class="body-p" data-reveal style="--delay:.12s">En Tegucigalpa la silla está en Plaza Paseo Loarque, salida al sur. En Comayagua, en Premium Plaza. Abre de lunes a sábado de 8:00 AM a 7:00 PM y los domingos de 9:00 AM a 6:00 PM.</p>
+            <div class="kicker" data-reveal>La silla</div>
+            <p class="lede" data-reveal style="--delay:.06s">Varias sillas. El mismo corte: fresco, con el fade limpio.</p>
+            <p class="body-p" data-reveal style="--delay:.12s">Victor's Barbería está dentro de Lomas Club Deportivo, sobre el Bulevar Morazán. Se atiende por orden de llegada y también por WhatsApp, si querés apartar la silla. Lunes a sábado de 9:00 AM a 6:45 PM. Domingos de 10:00 AM a 5:00 PM.</p>
           </div>
         </div>
       </div>
@@ -100,28 +149,10 @@
       <div class="section-head">
         <div class="kicker" data-reveal>Servicios</div>
         <h2 data-reveal style="--delay:.05s">Lo que se hace en la silla</h2>
-        <p data-reveal style="--delay:.1s">Corte, barba y el combo. Precios en lempiras, en las dos sucursales.</p>
+        <p data-reveal style="--delay:.1s">La lista del local. Corte y barba está en L 500. El resto es una referencia hasta confirmar.</p>
       </div>
       <div class="services-accordion" id="services-grid"></div>
-      <p class="pricing-note" data-reveal><b>Lempiras.</b> El degradado va incluido en el corte.</p>
-    </div>
-  </section>
-
-  <section id="productos">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="kicker" data-reveal>Tienda</div>
-        <h2 data-reveal style="--delay:.05s">Productos</h2>
-        <p data-reveal style="--delay:.1s">American Crew y Maxybelt para llevar el corte a casa. Pedí por WhatsApp.</p>
-      </div>
-      <div data-reveal style="--delay:.12s">
-        <div class="products-marquee" id="products-marquee">
-          <div class="products-marquee-track" data-marquee-track></div>
-        </div>
-      </div>
-      <div class="products-cta-wrap" data-reveal style="--delay:.16s">
-        <a href="productos.html" class="btn btn-primary" data-products-cta>Ver productos</a>
-      </div>
+      <p class="pricing-note" data-reveal><b>Lempiras.</b> Corte y barba, L 500. Los demás precios se confirman por WhatsApp.</p>
     </div>
   </section>
 
@@ -135,27 +166,17 @@
     </div>
   </section>
 
-  <section id="resenas">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="kicker" data-reveal>Reseñas</div>
-        <h2 data-reveal style="--delay:.05s">Lo que dicen en la silla</h2>
-      </div>
-      <div class="testimonials-grid" id="testimonials-grid"></div>
-    </div>
-  </section>
-
   <section id="contacto">
     <div class="wrap">
       <div class="section-head">
-        <div class="kicker" data-reveal>Sucursales</div>
-        <h2 data-reveal style="--delay:.05s">Agenda tu cita</h2>
+        <div class="kicker" data-reveal>Tegucigalpa</div>
+        <h2 data-reveal style="--delay:.05s">Apartá la silla</h2>
       </div>
       <div class="maps-grid" id="maps-grid" data-reveal></div>
       <div class="contact-grid">
         <div class="quote-block" data-reveal>
-          <p>“Elige la sucursal y te confirmamos la silla por WhatsApp.”</p>
-          <div class="who">0101 Barbershop</div>
+          <p>“Llegás sin cita, o escribís por WhatsApp y te apartamos la silla.”</p>
+          <div class="who">Victor's Barbería</div>
         </div>
         <div class="contact-card" data-reveal style="--delay:.08s">
           <div id="contact-locations"></div>
@@ -170,13 +191,13 @@
             <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
             <div class="txt">
               <b>Correo</b>
-              <a id="contact-email" href="mailto:0101barbershop@gmail.com">0101barbershop@gmail.com</a>
+              <a id="contact-email" href="mailto:victbarber21@gmail.com">victbarber21@gmail.com</a>
             </div>
           </div>
-          <button type="button" class="contact-cta-big" id="contact-whatsapp" aria-haspopup="dialog">
+          <a class="contact-cta-big" id="contact-whatsapp" href="https://wa.me/50495397558?text=Hola%2C%20quiero%20apartar%20una%20silla%20en%20Victor%27s%20Barber%C3%ADa" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.13-2.9-7C17.18 3.03 14.7 2 12.04 2Zm0 18.14h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.37c0-4.55 3.7-8.25 8.26-8.25 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.84c0 4.55-3.71 8.22-8.25 8.22Z"/></svg>
             Escribir por WhatsApp
-          </button>
+          </a>
           <div class="social-row" id="social-row"></div>
         </div>
       </div>
@@ -185,8 +206,8 @@
 
   <footer class="wrap">
     <div class="footer-row">
-      <span class="fbrand">0101 Barbershop</span>
-      <span>Tegucigalpa · Comayagua</span>
+      <span class="fbrand">Victor's Barbería</span>
+      <span>Lomas Club Deportivo · Bulevar Morazán</span>
     </div>
     <div class="foot-credit">Desarrollado por <a href="https://www.iagodigital.com/" target="_blank" rel="noopener">IAGO Digital</a></div>
   </footer>
@@ -197,26 +218,16 @@
     <img class="lightbox-img" id="lightbox-img" alt="">
   </div>
 
-  <div class="location-picker" id="location-picker" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="location-picker-title">
-    <button type="button" class="location-picker-backdrop" id="location-picker-backdrop" aria-label="Cerrar"></button>
-    <div class="location-picker-panel">
-      <button type="button" class="location-picker-close" id="location-picker-close" aria-label="Cerrar">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg>
-      </button>
-      <p class="location-picker-kicker" id="location-picker-title">¿En cuál sucursal?</p>
-      <p class="location-picker-hint" id="location-picker-hint">Te abrimos WhatsApp con la sucursal que elijas.</p>
-      <div class="location-picker-options" id="location-picker-options"></div>
-    </div>
-  </div>
-
 <script src="config.js"></script>
-<script src="products.js"></script>
 <script>
-(function render(){ const pinSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21c4-3.2 7-6.6 7-10.5A7 7 0 0 0 5 10.5C5 14.4 8 17.8 12 21Z"/><circle cx="12" cy="10.5" r="2.3"/></svg>';
+(function render(){
+  const pinSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21c4-3.2 7-6.6 7-10.5A7 7 0 0 0 5 10.5C5 14.4 8 17.8 12 21Z"/><circle cx="12" cy="10.5" r="2.3"/></svg>';
   const phoneSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.5.6 3.8.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C11.4 21 3 12.6 3 2.7c0-.6.4-1 1-1H7.7c.6 0 1 .4 1 1 0 1.3.2 2.6.6 3.8.1.4 0 .8-.3 1.1L6.6 10.8Z"/></svg>';
   const instaSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>';
   const facebookSvg = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H8v3h3v7h3v-7h3l1-3h-4V9c0-.6.4-1 1-1Z"/></svg>';
+  const tiktokSvg = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.5 3c.5 2.6 1.9 4.4 4.2 4.8v3c-1.5-.1-2.8-.6-4-1.4v6.3c0 3.3-2.6 5.8-5.9 5.8A5.8 5.8 0 0 1 3 15.7c0-3.2 2.5-5.7 5.6-5.8v3.1a2.8 2.8 0 0 0-2.6 2.8 2.8 2.8 0 0 0 2.8 2.8c1.6 0 2.8-1.2 2.8-2.8V3h2.9Z"/></svg>';
   const chevron = '<svg class="service-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  const location = CONFIG.locations[0];
 
   function esc(value){
     return String(value ?? "").replace(/[&<>"']/g, (ch) => ({
@@ -228,11 +239,14 @@
     }[ch]));
   }
 
-  function waLinkFor(location, customMessage){
-    const base = customMessage || CONFIG.business.whatsappMessage;
-    const message = `${base} (${location.name})`;
-    return `https://wa.me/${location.whatsappNumber}?text=${encodeURIComponent(message)}`;
+  function waLink(){
+    return `https://wa.me/${CONFIG.business.whatsappNumber}?text=${encodeURIComponent(CONFIG.business.whatsappMessage)}`;
   }
+
+  ["nav-whatsapp", "hero-whatsapp", "contact-whatsapp"].forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.href = waLink();
+  });
 
   document.getElementById("contact-email").textContent = CONFIG.business.email;
   document.getElementById("contact-email").href = `mailto:${CONFIG.business.email}`;
@@ -241,54 +255,47 @@
     <div class="hours-line"><span>${esc(hour.day)}</span><span>${esc(hour.time)}</span></div>
   `).join("");
 
-  document.getElementById("maps-grid").innerHTML = CONFIG.locations.map((location) => `
+  document.getElementById("maps-grid").innerHTML = `
     <article class="map-card">
       <div class="map-card-head">
-        <h3>${esc(location.name)}</h3>
+        <h3>${esc(location.address)}</h3>
         <a class="maps-link" href="${esc(location.mapsUrl)}" target="_blank" rel="noopener">Ver mapa</a>
       </div>
       <div class="map-frame">
-        <iframe title="Mapa de 0101 Barbershop ${esc(location.name)}" src="${esc(location.mapsEmbedUrl)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe title="Mapa de Victor's Barbería" src="${esc(location.mapsEmbedUrl)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </article>
-  `).join("");
+  `;
 
-  document.getElementById("contact-locations").innerHTML = CONFIG.locations.map((location) => {
-    const placeLabel = location.address === location.name ? "Cómo llegar" : location.address;
-    return `
+  document.getElementById("contact-locations").innerHTML = `
     <div class="location-block">
       <div class="location-block-name">${esc(location.name)}</div>
       <div class="contact-row">
         <div class="ic">${pinSvg}</div>
         <div class="txt">
-          <b><a href="${esc(location.mapsUrl)}" target="_blank" rel="noopener">${esc(placeLabel)}</a></b>
+          <b><a href="${esc(location.mapsUrl)}" target="_blank" rel="noopener">${esc(location.address)}</a></b>
         </div>
       </div>
       <div class="contact-row">
         <div class="ic">${phoneSvg}</div>
         <div class="txt">
           <b>${esc(location.phoneDisplay)}</b>
-          <a href="${esc(waLinkFor(location))}" target="_blank" rel="noopener">WhatsApp ${esc(location.name)}</a>
+          <a href="${esc(waLink())}" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
     </div>
   `;
-  }).join("");
 
   const socialHtml = [
-    ...CONFIG.locations.map((location) => `
-      <a class="social-pill" href="${esc(location.instagram)}" target="_blank" rel="noopener" aria-label="Instagram ${esc(location.name)}">
-        ${instaSvg}
-        <span>${esc(location.name)}</span>
-      </a>
-    `),
-    CONFIG.business.facebook ? `
-      <a class="social-pill" href="${esc(CONFIG.business.facebook)}" target="_blank" rel="noopener" aria-label="Facebook">
-        ${facebookSvg}
-        <span>Facebook</span>
-      </a>
-    ` : ""
-  ].join("");
+    { href: CONFIG.business.instagram, label: "Instagram", icon: instaSvg },
+    { href: CONFIG.business.facebook, label: "Facebook", icon: facebookSvg },
+    { href: CONFIG.business.tiktok, label: "TikTok", icon: tiktokSvg }
+  ].map((item) => `
+    <a class="social-pill" href="${esc(item.href)}" target="_blank" rel="noopener" aria-label="${esc(item.label)}">
+      ${item.icon}
+      <span>${esc(item.label)}</span>
+    </a>
+  `).join("");
   document.getElementById("hero-social").innerHTML = socialHtml;
   document.getElementById("social-row").innerHTML = socialHtml;
 
@@ -313,17 +320,9 @@
   `).join("");
 
   document.getElementById("gallery-grid").innerHTML = CONFIG.gallery.map((item, index) => `
-    <button type="button" class="gallery-tile" data-parallax-tile data-full="${esc(item.image)}" aria-label="${esc(item.alt)}">
-      <img class="gallery-img" src="${esc(item.image)}" alt="${esc(item.alt)}" loading="${index < 3 ? "eager" : "lazy"}">
+    <button type="button" class="gallery-tile${item.wide ? " is-wide" : ""}" data-full="${esc(item.image)}" aria-label="${esc(item.alt)}">
+      <img class="gallery-img" src="${esc(item.image)}" alt="${esc(item.alt)}" style="${item.position ? `object-position:${esc(item.position)}` : ""}" loading="${index < 3 ? "eager" : "lazy"}">
     </button>
-  `).join("");
-
-  document.getElementById("testimonials-grid").innerHTML = CONFIG.testimonials.map((item, index) => `
-    <article class="testimonial-card" data-reveal style="--delay:${index * 0.08}s">
-      <div class="stars" aria-label="5 de 5">★★★★★</div>
-      <blockquote>${esc(item.text)}</blockquote>
-      <div class="author">${esc(item.author)}</div>
-    </article>
   `).join("");
 
   const lightbox = document.getElementById("lightbox");
@@ -354,63 +353,8 @@
     trigger.setAttribute("aria-expanded", open ? "false" : "true");
   });
 
-  const picker = document.getElementById("location-picker");
-  const pickerOptions = document.getElementById("location-picker-options");
-  let lastFocus = null;
-
-  function renderPickerOptions(customMessage){
-    pickerOptions.innerHTML = CONFIG.locations.map((location) => `
-      <a class="location-option" href="${esc(waLinkFor(location, customMessage))}" target="_blank" rel="noopener">
-        <span class="location-option-name">${esc(location.name)}</span>
-        <span class="location-option-meta">${esc(location.phoneDisplay)}</span>
-        ${location.address !== location.name ? `<span class="location-option-meta">${esc(location.address)}</span>` : ""}
-      </a>
-    `).join("");
-  }
-  renderPickerOptions();
-
-  function closePicker(){
-    if (picker.hidden) return;
-    picker.hidden = true;
-    picker.setAttribute("aria-hidden", "true");
-    document.body.classList.remove("picker-open");
-    if (lastFocus && typeof lastFocus.focus === "function") lastFocus.focus();
-  }
-
-  function openPicker(trigger, customMessage){
-    lastFocus = trigger || document.activeElement;
-    renderPickerOptions(customMessage || null);
-    const hint = document.getElementById("location-picker-hint");
-    if (hint){
-      hint.textContent = customMessage
-        ? "Elegí la sucursal para enviar el pedido por WhatsApp."
-        : "Te abrimos WhatsApp con la sucursal que elijas.";
-    }
-    picker.hidden = false;
-    picker.setAttribute("aria-hidden", "false");
-    document.body.classList.add("picker-open");
-    const first = pickerOptions.querySelector("a");
-    if (first) first.focus();
-  }
-  window.openLocationPicker = openPicker;
-
-  if (window.ProductsUI){
-    ProductsUI.initCartUI();
-    ProductsUI.initFeaturedMarquee(document.getElementById("products-marquee"));
-  }
-
-  document.addEventListener("click", (event) => {
-    const trigger = event.target.closest("#nav-whatsapp, #hero-whatsapp, #contact-whatsapp");
-    if (trigger){
-      openPicker(trigger);
-      return;
-    }
-    if (event.target.closest("#location-picker-close, #location-picker-backdrop")) closePicker();
-  });
   document.addEventListener("keydown", (event) => {
-    if (event.key !== "Escape") return;
-    closeLightbox();
-    closePicker();
+    if (event.key === "Escape") closeLightbox();
   });
 
   const nav = document.getElementById("nav");
@@ -421,6 +365,17 @@
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
   const isCoarse = window.matchMedia("(pointer: coarse)").matches;
+
+  const slides = Array.from(document.querySelectorAll(".hero-img"));
+  if (!reduced && slides.length > 1){
+    let heroIndex = 0;
+    setInterval(() => {
+      if (document.hidden) return;
+      slides[heroIndex].classList.remove("is-active");
+      heroIndex = (heroIndex + 1) % slides.length;
+      slides[heroIndex].classList.add("is-active");
+    }, 4200);
+  }
 
   if (reduced){
     document.querySelectorAll("[data-reveal]").forEach((el) => el.classList.add("is-visible"));
@@ -436,7 +391,6 @@
       threshold: isCoarse ? 0.06 : 0.12,
       rootMargin: isCoarse ? "0px" : "0px 0px -30px 0px"
     });
-    window.__revealIO = io;
     document.querySelectorAll("[data-reveal]").forEach((el) => io.observe(el));
 
     function revealHeroContent(){
@@ -459,21 +413,14 @@
       blobScroll: isCoarse ? 0.42 : 0.5,
       blobPointer: isCoarse ? 8 : 18,
       blobFloat: isCoarse ? 16 : 20,
-      galleryY: isCoarse ? 60 : 110,
-      galleryX: isCoarse ? 0 : 30,
-      galleryRotate: isCoarse ? 0 : 2.5,
-      galleryScale: isCoarse ? 0.05 : 0.06,
-      tiltMax: canHover ? 14 : 11,
-      tiltScroll: isCoarse ? 12 : 10,
-      heroDrift: isCoarse ? 0.14 : 0.18,
-      heroImgX: isCoarse ? 0 : 8
+      tiltMax: canHover ? 10 : 8,
+      tiltScroll: isCoarse ? 8 : 7,
+      heroDrift: isCoarse ? 0.1 : 0.14
     };
 
     const blobs = document.querySelectorAll("[data-parallax]");
-    const tiles = document.querySelectorAll("[data-parallax-tile]");
     const heroInner = document.querySelector(".hero-inner");
     const vh = () => window.innerHeight;
-
     let ptrX = 0;
     let ptrY = 0;
     let ptrOn = false;
@@ -502,7 +449,6 @@
       const inner = card.querySelector(".about-card-inner") || card;
       const MAX = MOTION.tiltMax;
       let dragging = false;
-
       const applyTilt = (cx, cy) => {
         const r = card.getBoundingClientRect();
         const px = (cx - r.left) / r.width;
@@ -511,9 +457,6 @@
         const rx = (0.5 - py) * MAX * 2;
         inner.style.setProperty("--rx", rx.toFixed(2) + "deg");
         inner.style.setProperty("--ry", ry.toFixed(2) + "deg");
-        if (canHover){
-          inner.style.boxShadow = `${ry * -0.8}px ${rx * 0.8 + 20}px 50px -12px rgba(0,0,0,0.45)`;
-        }
       };
       const resetTilt = () => {
         dragging = false;
@@ -521,9 +464,7 @@
         if (!canHover) return;
         inner.style.setProperty("--rx", "0deg");
         inner.style.setProperty("--ry", "0deg");
-        inner.style.boxShadow = "";
       };
-
       card.addEventListener("pointerdown", (e) => {
         dragging = true;
         card.dataset.tiltActive = "1";
@@ -537,13 +478,6 @@
       if (canHover) card.addEventListener("pointerleave", resetTilt, { passive: true });
     });
 
-    if (tiles.length){
-      const galleryIO = new IntersectionObserver((entries) => {
-        entries.forEach((e) => e.target.classList.toggle("in-view", e.isIntersecting));
-      }, { threshold: isCoarse ? 0.35 : 0.45 });
-      tiles.forEach((t) => galleryIO.observe(t));
-    }
-
     function update(){
       const y = window.scrollY;
       const time = Date.now() * 0.001;
@@ -553,44 +487,20 @@
         const speed = parseFloat(b.dataset.parallax) || 0.2;
         const scrollY = y * speed * -MOTION.blobScroll;
         const strength = (i + 1) * MOTION.blobPointer;
-        const mx = (canHover || ptrOn) ? ptrX * strength : ptrX * strength * 0.5;
-        const my = (canHover || ptrOn) ? ptrY * strength : ptrY * strength * 0.5;
+        const mx = ptrX * strength;
+        const my = ptrY * strength;
         const float = Math.sin(time + i * 1.4) * MOTION.blobFloat;
         b.style.transform = `translate3d(${mx}px, ${scrollY + my + float}px, 0)`;
       });
 
-      if (heroInner){
+      if (heroInner && y < viewH * 1.2){
         const progress = Math.min(y / viewH, 1);
-        if (y < viewH * 1.2){
-          heroInner.style.transform = `translate3d(0, ${y * MOTION.heroDrift}px, 0)`;
-          heroInner.style.opacity = String(1 - progress * 0.35);
-        } else {
-          heroInner.style.transform = "";
-          heroInner.style.opacity = "";
-        }
+        heroInner.style.transform = `translate3d(0, ${y * MOTION.heroDrift}px, 0)`;
+        heroInner.style.opacity = String(1 - progress * 0.35);
+      } else if (heroInner){
+        heroInner.style.transform = "";
+        heroInner.style.opacity = "";
       }
-
-      tiles.forEach((t, i) => {
-        const rect = t.getBoundingClientRect();
-        const center = rect.top + rect.height / 2 - viewH / 2;
-        const progress = center / viewH;
-        const dir = i % 2 === 0 ? 1 : -1;
-        const col = i % 3;
-        const offsetY = Math.max(Math.min(progress * -MOTION.galleryY * dir, isCoarse ? 40 : 75), isCoarse ? -40 : -75);
-        const offsetX = isCoarse ? 0 : Math.max(Math.min(progress * MOTION.galleryX * (col - 1), 28), -28);
-        const rotate = isCoarse ? 0 : progress * MOTION.galleryRotate * dir;
-        t.style.transform = `translate3d(${offsetX}px, ${offsetY}px, 0) rotate(${rotate}deg)`;
-
-        const img = t.querySelector(".gallery-img");
-        if (img){
-          const inView = rect.top < viewH && rect.bottom > 0;
-          const dist = Math.min(Math.abs(progress), 1);
-          const scale = inView ? 1.12 + dist * MOTION.galleryScale : 1.12;
-          const imgY = progress * (isCoarse ? -14 : -24);
-          const imgX = isCoarse ? 0 : progress * MOTION.heroImgX * (i % 2 === 0 ? 1 : -1);
-          img.style.transform = `scale(${scale}) translate3d(${imgX}px, ${imgY}px, 0)`;
-        }
-      });
 
       if (!canHover){
         document.querySelectorAll("[data-tilt]").forEach((card) => {
@@ -599,23 +509,20 @@
           const rect = card.getBoundingClientRect();
           const center = rect.top + rect.height / 2 - viewH / 2;
           const progress = Math.max(Math.min(center / (viewH / 2), 1), -1);
-          const rx = progress * -MOTION.tiltScroll;
-          const ry = progress * (MOTION.tiltScroll * 0.7);
-          inner.style.setProperty("--rx", rx.toFixed(2) + "deg");
-          inner.style.setProperty("--ry", ry.toFixed(2) + "deg");
+          inner.style.setProperty("--rx", (progress * -MOTION.tiltScroll).toFixed(2) + "deg");
+          inner.style.setProperty("--ry", (progress * (MOTION.tiltScroll * 0.7)).toFixed(2) + "deg");
         });
       }
     }
 
-    (function loop(){ update(); requestAnimationFrame(loop); })();
+    (function loop(){
+      if (!document.hidden) update();
+      requestAnimationFrame(loop);
+    })();
     window.addEventListener("resize", update, { passive: true });
-    window.addEventListener("orientationchange", () => setTimeout(update, 150), { passive: true });
-  }
-
-  if (!reduced && window.__revealIO){
-    document.querySelectorAll("[data-reveal]:not(.is-visible)").forEach((el) => window.__revealIO.observe(el));
   }
 })();
 </script>
+<noscript><style>[data-reveal],.hero .hero-inner [data-reveal],.hero .scroll-cue,.hero-meta .item{opacity:1!important;transform:none!important;filter:none!important}</style></noscript>
 </body>
 </html>

@@ -1,25 +1,13 @@
 # Victor's Barbería
 
-Demo base copied from [0101 Barbershop](https://github.com/stellier7/0101barbershop). The pages still show 0101 content. Victor's logo and storefront photo are staged and not wired in yet:
+Demo de Victor's Barbería en Tegucigalpa. El contenido editable (WhatsApp, horario, servicios y fotos) está en `config.js`.
 
-- `images/brand/logo.jpg`
-- `images/brand/hero.jpg`
-
----
-
-# 0101 Barbershop
-
-Sitio de **0101 Barbershop** — Tegucigalpa y Premium Plaza, Comayagua.
-
-El contenido editable (sucursales, WhatsApp, horario, servicios, productos e Instagram) está en `config.js`.
+Los precios distintos de corte y barba (L 500) son una referencia hasta confirmar la lista.
 
 | Qué | Dónde |
 |-----|--------|
 | Inicio | `index.html` |
-| Catálogo | `productos.html` |
 | Logo | `images/logo.jpg` |
-| Foto principal | `images/hero.jpg` |
+| Hero | `images/hero/` |
 | Equipo | `images/team.jpg` |
-| Interior | `images/interior.jpg` |
 | Cortes | `images/gallery/` |
-| Productos | `images/products/` |
