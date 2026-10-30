@@ -196,9 +196,8 @@
 
   function ensureNavCartButton() {
     if (document.querySelector("[data-cart-toggle]")) return;
-    const nav = document.getElementById("nav");
-    const whatsapp = document.getElementById("nav-whatsapp");
-    if (!nav || !whatsapp) return;
+    const navActions = document.querySelector(".nav-actions");
+    if (!navActions) return;
     const ui = getUi();
     const btn = document.createElement("button");
     btn.type = "button";
@@ -208,7 +207,14 @@
     btn.innerHTML = `
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 7h15l-1.4 8.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.7L5.2 4.5A1.5 1.5 0 0 0 3.7 3.2H2"/><circle cx="10" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>
       <span class="nav-cart-count" data-cart-count hidden></span>`;
-    whatsapp.insertAdjacentElement("beforebegin", btn);
+    navActions.appendChild(btn);
+  }
+
+  function bindFloatingWhatsApp() {
+    const link = document.getElementById("wa-float");
+    const locs = locations();
+    if (!link || !locs[0]) return;
+    link.href = waLinkFor(locs[0]);
   }
 
   function renderCartDrawer() {
@@ -281,6 +287,7 @@
 
   function initCartUI() {
     ensureNavCartButton();
+    bindFloatingWhatsApp();
     ensureCartDom();
     syncCartBadge();
 
